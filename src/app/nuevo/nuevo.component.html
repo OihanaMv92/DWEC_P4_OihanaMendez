@@ -1,0 +1,24 @@
+<div class="d-none">
+
+    <span id="valorTitulo">{{nuevoLibro.titulo}}</span>
+    <span id="valorAutor">{{nuevoLibro.autor}}</span>
+    <span id="valorDescripcion">{{nuevoLibro.descripcion}}</span>
+
+</div>
+<div class="container py-5">
+    <div class="w-50 mx-auto">
+        <label for="nuevoTitulo" class="form-label">Título</label>
+        <input [(ngModel)]="nuevoLibro.titulo" type="text" class="form-control" placeholder="Titulo" max="50" required>
+
+        <label for="nuevoAutor" class="form-label">Autor</label>
+        <input [(ngModel)]="nuevoLibro.autor" class="form-control" type="text" placeholder="Escribe quien es el autor" max="30" required>
+
+        <label for="nuevoDescripcion" class="form-label">Descripción (Opcional)</label>
+        <div class="form-floating">
+            <textarea [(ngModel)]="nuevoLibro.descripcion" class="form-control" placeholder="Añade una descripción aquí" maxlength="300"></textarea>
+            <label for="nuevoDescripcion">Añade una descripción aquí</label>
+        </div>
+
+        <button id="nuevoBotonCrear" (click)="insertar()" class="btn btn-success mt-3">Añadir</button>
+    </div>
+</div>
